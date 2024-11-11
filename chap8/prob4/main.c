@@ -7,11 +7,17 @@ int main(void)
 		perror("exit_handler1 Cannot add");
 	if(atexit(exit_handler2) != 0)
 		perror("exit_handler2 Cannot add");
-	printf("main END\n");
+	printf("main done\n");
 	exit(0);
 }
 
 static void exit_handler1(void)
 {
-	printf("Frist exit processer\n"
+	printf("Frist exit hander\n");
+}
+
+static void exit_handler2(void)
+{
+	printf("Second exit hander\n");
+}
 
