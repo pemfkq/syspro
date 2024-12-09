@@ -18,7 +18,7 @@ int main()
 	}else{
 		close(fd[1]);
 		n = read(fd[1],line,MAXLINE);
-		printf("Recv: [%d] Hello from PID %d\n", getpid(),getpid());
+		printf("Recv: [%d] Hello from PID %d\n", getpid(),getppid());
 	}
 
 	exit(0);
